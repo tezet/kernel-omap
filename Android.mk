@@ -1,5 +1,5 @@
 ifeq ($(TARGET_BOARD_PLATFORM),omap3)
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),jordan)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),milestone2)
 
 # Prevent conflict with CM9 kernel.mk build task
 ifeq ($(TARGET_AUTO_KDIR),)
@@ -91,10 +91,10 @@ endif
 # Default values if not set
 
 ifeq ($(BLD_CONF),)
-    BLD_CONF=mapphone_mb525_defconfig
+    BLD_CONF=mapphone_milestone2_defconfig
 endif
 ifeq ($(KERNEL_SRC_DIR),)
-    KERNEL_SRC_DIR := $(ROOTDIR)kernel/moto/mb525
+    KERNEL_SRC_DIR := $(ROOTDIR)kernel/moto/milestone2
 endif
 
 # Can be used in modules makefiles :
@@ -110,7 +110,7 @@ TARGET_PREBUILT_KERNEL ?= $(KERNEL_BUILD_DIR)/arch/arm/boot/zImage
 
 DEFCONFIGSRC                := ${KERNEL_SRC_DIR}/arch/arm/configs
 LJAPDEFCONFIGSRC            := ${DEFCONFIGSRC}/ext_config
-PRODUCT_SPECIFIC_DEFCONFIGS := $(DEFCONFIGSRC)/mapphone_mb525_defconfig
+PRODUCT_SPECIFIC_DEFCONFIGS := $(DEFCONFIGSRC)/mapphone_milestone2_defconfig
 _TARGET_DEFCONFIG           := __ext_mapphone_defconfig
 TARGET_DEFCONFIG            := $(DEFCONFIGSRC)/$(_TARGET_DEFCONFIG)
 
